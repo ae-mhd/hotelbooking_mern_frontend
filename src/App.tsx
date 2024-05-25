@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./layouts/Layout";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
         path="/"
         element={
           <Layout>
-            <h1>Home Page</h1>{" "}
+            <h1>Home Page</h1>
+            <p>-12:30</p>
           </Layout>
         }
       />
@@ -17,6 +19,14 @@ function App() {
         element={
           <Layout>
             <h1>Search Page</h1>{" "}
+          </Layout>
+        }
+      />
+      <Route
+        path="/register"
+        element={
+          <Layout>
+            <Register />
           </Layout>
         }
       />
